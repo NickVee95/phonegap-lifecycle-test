@@ -2,7 +2,9 @@ var paused_count =0;
 var resumed_count = 0;
 var launched_count = 0;
 
-document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReady, false); 
+//creates a new event listener, internal device 
+//running listening out for a specific event from the phone (Device ready).
 		
 	
 function updateDisplay() {
@@ -22,7 +24,7 @@ function updateDisplay() {
 	launched_count++;
 	updateDisplay();
 	    
-	alert("device ready");
+	console.log("device ready");
     }
 
 
@@ -31,7 +33,7 @@ function updateDisplay() {
 	paused_count++;
 	updateDisplay();
 	    
-	alert("pause");
+	console.log("pause");
     }
 	
 
@@ -40,5 +42,5 @@ function updateDisplay() {
 	resumed_count++;
 	updateDisplay();
 	    
-	alert("resume");
+	console.log("resume");
     }
